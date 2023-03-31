@@ -1,0 +1,53 @@
+directories:
+  output: release/${version}
+  buildResources: resources
+appId: com.electron-playground
+productName: electron-playground
+buildVersion: 1.0.0
+artifactName: ${productName}_${version}.${ext}
+files:
+  - filter:
+      - dist
+      - resources
+      - '!node_modules'
+asar: false
+forceCodeSigning: false
+releaseInfo:
+  releaseName: 版本更新
+  releaseNotes: ''
+mac:
+  target:
+    - dmg
+    - zip
+  icon: resources/icon.icns
+  category: public.app-category.developer-tools
+  hardenedRuntime: true
+  entitlements: resources/entitlements.mac.plist
+  extendInfo:
+    NSMicrophoneUsageDescription: 请允许访问您的麦克风
+    NSCameraUsageDescription: 请允许访问您的摄像头
+dmg:
+  icon: resources/icon.ico
+  title: ${productName}_${version}
+  iconSize: 128
+  contents:
+    - x: 130
+      'y': 220
+    - x: 410
+      'y': 220
+      type: link
+      path: /Applications
+win:
+  target:
+    - target: nsis
+      arch:
+        - ia32
+  icon: resources/icon.ico
+nsis:
+  oneClick: false
+  perMachine: false
+  allowElevation: true
+  allowToChangeInstallationDirectory: true
+  deleteAppDataOnUninstall: false
+  displayLanguageSelector: false
+electronVersion: 12.0.1

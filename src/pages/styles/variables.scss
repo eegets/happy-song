@@ -1,0 +1,28 @@
+// 主题色-蓝
+$themeBlue: #4785FF;
+$themeBlue1: #80AAFF;
+$themeBlue2: #99BBFF;
+$themeBlue3: #C7DAFF;
+$themeBlue4: #E0EAFF;
+$themeBlue5: #EBF2FF;
+$themeBlue6: #F5F8FF;
+// 辅助色-完成
+$themeSuccess: rgba(0, 194, 97, 1);
+$themeSuccess1: rgba(0, 194, 97, 0.6);
+$themeSuccess2: rgba(0, 194, 97, 0.3);
+// 辅助色-待定
+$themeWarning: rgba(255, 173, 102, 1);
+$themeWarning1: rgba(255, 173, 102, 0.6000);
+$themeWarning2: rgba(255, 163, 102, 0.3000);
+// 辅助色-失败/警告
+$themeDanger: rgba(255, 81, 61, 1);
+$themeDanger1: rgba(255, 81, 61, 0.6000);
+$themeDanger2: rgba(255, 81, 61, 0.3000);
+
+$navBarHeight: 50px;
+$navBarBg: #fff;
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+}
